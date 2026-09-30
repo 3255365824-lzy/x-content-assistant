@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "X 素材助手 · 只读选帖",
+  "version": "0.3.7",
+  "description": "在 App 请求时读取 X 可见页面，优先相关大号新帖；不发送、不点赞、不读取登录凭据。",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "scripting", "alarms"],
+  "host_permissions": ["https://x.com/*", "http://127.0.0.1/*"],
+  "background": {"service_worker": "worker.js", "type": "module"},
+  "action": {"default_title": "连接 X 素材助手", "default_popup": "popup.html"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; connect-src http://127.0.0.1:18796"}
+}
